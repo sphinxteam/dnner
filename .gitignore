@@ -1,0 +1,15 @@
+build/
+dist/
+*.egg-info/
+**/__pycache__
+
+*.lprof
+
+*.c
+*.so
+*.a
+*.lib
+
+_build
+
+**/.ipynb_checkpoints
