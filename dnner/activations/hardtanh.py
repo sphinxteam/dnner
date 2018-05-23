@@ -11,11 +11,15 @@ from .hardtanh_fast import _f
 
 
 class HardTanh(base.Activation):
-    r"""
-        Compute relevant quantities for hard tanh likelihood
+    r"""Compute relevant quantities for hard tanh likelihood.
 
-        Args:
-            var_noise (float): noise variance $\sigma^2$
+    Parameters
+    ----------
+    var_noise : float
+        Noise variance :math:`\sigma^2`.
+
+    thres : float
+        Threshold from linear to constant.
     """
 
     def __init__(self, var_noise, thres=1):

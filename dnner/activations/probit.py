@@ -9,12 +9,14 @@ from ..utils.preprocessing import check_m
 
 
 class Probit(base.Activation):
-    r"""
-        Compute relevant quantities for probit likelihood $P(y | z) =
-        \frac12 \erfc(-yz / \sqrt{\sigma^2})$.
+    r"""Compute relevant quantities for probit likelihood
 
-        Args:
-            var_noise (float): noise variance $\sigma^2$
+    Defined by :math:`P(y | z) = \frac12 \erfc(-yz / \sqrt{\sigma^2})`.
+
+    Parameters
+    ----------
+    var_noise : float
+        Noise variance :math:`\sigma^2`.
     """
 
     def __init__(self, var_noise):

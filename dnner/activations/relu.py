@@ -11,13 +11,15 @@ from .relu_fast import _f
 
 
 class ReLU(base.Activation):
-    r"""
-        Compute relevant quantities for ReLU likelihood $P(y | z) =
-        \theta(y) \mathcal{N} (y; z, \sigma^2) + \delta(y) \frac{1}{2} {\rm
-        erfc} (z / \sqrt{2 \sigma^2})$.
+    r"""Compute relevant quantities for ReLU likelihood
 
-        Args:
-            var_noise (float): noise variance $\sigma^2$
+    Defined by :math:`P(y | z) = \theta(y) \mathcal{N} (y; z, \sigma^2) +
+    \delta(y) \frac{1}{2} {\rm erfc} (z / \sqrt{2 \sigma^2})`.
+
+    Parameters
+    ----------
+    var_noise : float
+        Noise variance :math:`\sigma^2`.
     """
 
     def __init__(self, var_noise):

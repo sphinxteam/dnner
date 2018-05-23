@@ -4,8 +4,12 @@ from .. import base
 
 
 class Gaussian(base.Ensemble):
-    r""" Matrices with Gaussian i.i.d. entries and rows-to-columns ratio
-         equal $\alpha$
+    """ Ensemble of Gaussian i.i.d. matrices.
+
+    Parameters
+    ----------
+    alpha : float
+        Rows-to-columns ratio of the matrix.
     """
 
     def __init__(self, alpha):

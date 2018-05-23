@@ -5,20 +5,21 @@ from ..utils.integration import H
 
 
 class SpikeSlab(base.Prior):
-    """
-        Compute relevant quantities for spike and slab prior $P_0(x) = p
-        \mathcal{N} (x; \mu, \sigma^2) + (1 - p) \delta(x)$.
+    r"""Compute relevant quantities for spike and slab prior.
 
-        Args:
-            prob (float): prior probability $p$ of x being different from zero
-            mean (float): mean $\mu$ of the Normal component
-            var(float): variance $\sigma^2$ of the Normal component
+    Defined by :math:`P_0(x) = p \mathcal{N} (x; \mu, \sigma^2) + (1 - p)
+    \delta(x)`.
 
-        Attributes:
-            prob (float): prior probability $p$ of x being different from zero
-            mean (float): mean $\mu$ of the Normal component
-            var(float): variance $\sigma^2$ of the Normal component
-            rho (float): 2nd moment of P_0 (x)
+    Parameters
+    ----------
+    prob : float
+        Prior probability :math:`p` of x being different from zero.
+
+    mean : float
+        Mean :math:`\mu` of the Normal component.
+
+    var : float
+        Variance :math:`\sigma^2` of the Normal component.
     """
 
     def __init__(self, prob, mean, var):

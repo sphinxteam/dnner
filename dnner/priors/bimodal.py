@@ -7,17 +7,14 @@ from ..utils.integration import H
 
 
 class Bimodal(base.Prior):
-    """
-        Compute relevant quantities for bimodal, $\pm1$ prior $P_0(x) = p
-        \delta(x - 1) + (1 - p) \delta(x + 1)$.
+    r"""Compute relevant quantities for bimodal, :math:`\pm1` prior.
 
-        Args:
-            prob (float): prior probability of x being positive
+    Defined by :math:`P_0(x) = p \delta(x - 1) + (1 - p) \delta(x + 1)`.
 
-        Attributes:
-            prob (float): prior probability of x being positive
-            rho (float): 2nd moment of P_0 (x)
-            b0 (float): auxiliary field used throughout computations
+    Parameters
+    ----------
+    prob : float
+        Prior probability of x being positive.
     """
 
     def __init__(self, prob):

@@ -4,12 +4,14 @@ from .. import base
 
 
 class Linear(base.Activation):
-    """
-        Compute relevant quantities for noisy linear activation :math:`P(x |
-        z) = \mathcal{N} (x; z, \sigma^2)`.
+    r"""Compute relevant quantities for noisy linear activation.
 
-        Args:
-            var_noise (float): noise variance :math:`\sigma^2`
+    Defined by :math:`P(x | z) = \mathcal{N} (x; z, \sigma^2)`.
+
+    Parameters
+    ----------
+    var_noise : float
+        Noise variance :math:`\sigma^2`
     """
 
     def __init__(self, var_noise):

@@ -11,14 +11,18 @@ from .relu_fast import _f
 
 
 class LeakyReLU(base.Activation):
-    r"""
-        Compute relevant quantities for leaky ReLU likelihood $P(y | z) =
-        \theta(y) \mathcal{N} (y; z, \sigma^2) + \theta(-y) \mathcal{N} (y;
-        \gamma z, \gamma^2 \sigma^2)$.
+    r"""Compute relevant quantities for leaky ReLU likelihood.
 
-        Args:
-            var_noise (float): noise variance $\sigma^2$
-            gamma (float): leaky ReLU parameter
+    Defined by :math:`P(y | z) = \theta(y) \mathcal{N} (y; z, \sigma^2) +
+    \theta(-y) \mathcal{N} (y; \gamma z, \gamma^2 \sigma^2)`.
+
+    Parameters
+    ----------
+    var_noise : float
+        Noise variance :math`\sigma^2`.
+
+    gamma : float
+        Leaky ReLU parameter.
     """
 
     def __init__(self, var_noise, gamma):

@@ -10,7 +10,7 @@ from ..ensembles import Empirical
 
 
 def check_args(layers, weights, v0, fixed_v):
-    """ Check arguments of extremize and compute_entropy
+    """Check arguments of extremize and compute_entropy
     """
     # Get layers and weights
     n_layers = len(layers) - 1
@@ -37,8 +37,10 @@ def check_args(layers, weights, v0, fixed_v):
 
 
 def initialize(layers_orig, weights_orig):
-    """ Initialize activations as interface/channel depending on position,
-        and ensembles depending on dtype
+    """Initialize activations/ensembles.
+
+    Initialize activations as interface/channel depending on position, and
+    ensembles depending on dtype.
     """
     n_layers = len(layers_orig) - 1
 
@@ -61,7 +63,7 @@ def initialize(layers_orig, weights_orig):
 
 
 def precompute(layers, weights, verbose=0):
-    """ Precompute relevant quantities for extremize and compute_entropy
+    """Precompute relevant quantities for extremize and compute_entropy
     """
     # Compute ratios b/w number of units, \alpha and \tilde{\alpha}
     # NOTE: \tilde{\alpha}_i = \tilde{\alpha}_{i + 1} \alpha_i
@@ -85,7 +87,7 @@ def precompute(layers, weights, verbose=0):
 
 
 def set_v0(v0, fixed_v, rho, delta=1e-10, many_v0=False):
-    """ Initialize v0 from argument
+    """Initialize v0 from argument
     """
     n_layers = len(fixed_v)
 
@@ -133,10 +135,10 @@ def set_v0(v0, fixed_v, rho, delta=1e-10, many_v0=False):
     return v0_
 
 
-def check_m(v, rho):
-    r""" Compute m = \rho - v$
+def check_m(v, rho, verbose=0):
+    r"""Compute m = \rho - v$
     """
-    if rho - v < 0:  # handle m = rho - v < 0
+    if rho - v < 0 and verbose:  # handle m = rho - v < 0
         warnings.warn("rho = %.4f smaller than v = %.4f" % (rho, v),
                       category=RuntimeWarning)
     return max(rho - v, 0)

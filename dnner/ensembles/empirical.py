@@ -8,7 +8,12 @@ from .. import base
 
 
 class Empirical(base.Ensemble):
-    r""" Ensemble defined by the empirical spectrum of a matrix W
+    """Ensemble defined by the empirical spectrum of a matrix W.
+
+    Parameters
+    ----------
+    W : ndarray, shape (n_rows, n_cols)
+        Matrix which spectrum will be used in computing transforms.
     """
 
     def __init__(self, w):

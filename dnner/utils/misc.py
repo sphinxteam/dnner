@@ -4,7 +4,7 @@ import numpy as np
 
 
 def compute_gaussian_entropy(weights, var_noise):
-    """ Compute entropy of a Gaussian channel
+    """Compute entropy of a Gaussian channel
     """
     alpha = weights.shape[0] / weights.shape[1]
     eigvals = np.linalg.eigvalsh(weights.dot(weights.T))

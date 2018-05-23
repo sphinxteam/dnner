@@ -4,18 +4,17 @@ from .. import base
 
 
 class Normal(base.Prior):
-    """
-        Compute relevant quantities for a Gaussian prior $P_0(x) = N(x; \mu,
-        \sigma^2)$.
+    r"""Compute relevant quantities for a Gaussian prior.
 
-        Args:
-            mean (float): prior mean $\mu$
-            var (float): prior variance $\sigma^2$
+    Defined by :math:`P_0(x) = N(x; \mu, \sigma^2)`.
 
-        Attributes:
-            mean (float): prior mean $\mu$
-            var (float): prior variance $\sigma^2$
-            rho (float): 2nd moment of P_0 (x)
+    Parameters
+    ----------
+    mean : float
+        Prior mean :math:`\mu`.
+
+    var : float
+        Prior variance :math`\sigma^2`.
     """
 
     def __init__(self, mean, var):
