@@ -129,7 +129,7 @@ cdef double _z(double a, double b, double w, double v_eff, double gamma, int x):
 
 
 def _f(double b, double w, double a, double m, double v_eff, double gamma,
-              int fun, int term):
+       int fun, int term):
     r"""Function $z f$ to be integrated over Gaussian measure"""
     cdef double s_w, s_b, w_, b_
     cdef double z, f
