@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/python:3.6.1
+    steps:
+      - checkout
+      - restore-cache:
+          key: deps-{{ .Branch }}-{{ checksum "setup.py" }}
+      - run:
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install numpy scipy matplotlib nose2 Cython
+            python setup.py build_ext --inplace
+            python setup.py install
+            nose2
+      - save-cache:
+          key: deps-{{ .Branch }}-{{ checksum "setup.py" }}
+          paths:
+            - "venv" 

@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/sphinxteam/dnner.svg?style=shield&circle-token=0ef33cba0006cacfe906ba1a86c1f870648bcf88)](https://circleci.com/gh/sphinxteam/dnner)
+
 # dnner - DNNs Entropy from Replicas
 
 The code in this package computes the entropy, mutual information and MMSE
