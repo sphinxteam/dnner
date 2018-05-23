@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/sphinxteam/dnner.svg?style=shield&circle-token=0ef33cba0006cacfe906ba1a86c1f870648bcf88)](https://circleci.com/gh/sphinxteam/dnner)
+[![CircleCI](https://circleci.com/gh/sphinxteam/dnner.svg?style=shield&circle-token=bc4469b861e9e60d58fd19f793b483c65d7ae1f0)](https://circleci.com/gh/sphinxteam/dnner)
 
 # dnner - DNNs Entropy from Replicas
 
