@@ -4,7 +4,8 @@
 
 The code in this package computes the entropy, mutual information and MMSE
 of multi-layer GLMs given orthogonally-invariant matrices of arbitrary
-spectrum.
+spectrum. More details available in
+[arXiv:1805.09785](https://arxiv.org/abs/1805.09785).
 
 ## Instructions
 
@@ -85,3 +86,9 @@ to better results.
 The ML-VAMP state evolution is in general more stable, but rarely it might
 also happen that variances/precisions become negative. In our experience
 however, one of the two schemes will always work.
+
+## References
+
+- M. Gabrié, A. Manoel, N. Luneau, J. Barbier, N. Macris, F. Krzakala and L.
+  Zdeborová, *Entropy and mutual information in models of deep neural
+  networks*, [arXiv:1805.09785](https://arxiv.org/abs/1805.09785).
