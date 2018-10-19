@@ -60,7 +60,7 @@ and the following ensembles
 ## Troubleshooting
 
 **I want to implement a new prior/activation/ensemble, how are the
-different functions defined**
+different functions defined?**
 
 For the priors, one must implement: `iter_v`, eq. 55 in the paper,
 `eval_i`, eq. 34a, and `eval_rho`, defined between eqs. 32 and 33.
