@@ -35,6 +35,13 @@ added to the `dnner/{priors, activations, ensembles}` folders. Look at the
 files already present in these folders for examples; the methods in them
 (`iter_a`, `iter_v`, `iter_theta`, `eval_i`, ...) should be reimplemented.
 
+For the priors, one must implement: `iter_v`, eq. 55 in the paper,
+`eval_i`, eq. 34a, and `eval_rho`, defined between eqs. 32 and 33.
+For outputs: `iter_a`, eq. 52, `eval_i`, eq. 34b. For interfaces:
+`iter_a`, eq. 51, `iter_v`, eq. 54, `eval_i`, eq. 33, `eval_rho`, see
+footnote in page 19. Finally, for ensembles, `iter_theta`, eq. 50a,
+`iter_llmse`, eq. 60, and `eval_f`, eq. 6.
+
 After implementing the new class, you can add it to the `__init__.py` inside
 `priors`/`activations`/`ensembles` so that it can be more easily imported.
 
@@ -58,16 +65,6 @@ and the following ensembles
 - `Empirical`
 
 ## Troubleshooting
-
-**I want to implement a new prior/activation/ensemble, how are the
-different functions defined?**
-
-For the priors, one must implement: `iter_v`, eq. 55 in the paper,
-`eval_i`, eq. 34a, and `eval_rho`, defined between eqs. 32 and 33.
-For outputs: `iter_a`, eq. 52, `eval_i`, eq. 34b. For interfaces:
-`iter_a`, eq. 51, `iter_v`, eq. 54, `eval_i`, eq. 33, `eval_rho`, see
-footnote in page 19. Finally, for ensembles, `iter_theta`, eq. 50a,
-`iter_llmse`, eq. 60, and `eval_f`, eq. 6.
 
 **I keep get warnings throughout the iteration, should I be worried about
 it?**
