@@ -14,10 +14,10 @@ spectrum. More details available in
 First make sure you have all the requirements installed
 
 - Python 3.x
+- Cython
 - Numpy
 - Matplotlib
 - Scipy
-- Cython
 
 Then type
 
@@ -59,6 +59,16 @@ and the following ensembles
 
 ## Troubleshooting
 
+**I want to implement a new prior/activation/ensemble, how are the
+different functions defined**
+
+For the priors, one must implement: `iter_v`, eq. 55 in the paper,
+`eval_i`, eq. 34a, and `eval_rho`, defined between eqs. 32 and 33.
+For outputs: `iter_a`, eq. 52, `eval_i`, eq. 34b. For interfaces:
+`iter_a`, eq. 51, `iter_v`, eq. 54, `eval_i`, eq. 33, `eval_rho`, see
+footnote in page 19. Finally, for ensembles, `iter_theta`, eq. 50a,
+`iter_llmse`, eq. 60, and `eval_f`, eq. 6.
+
 **I keep get warnings throughout the iteration, should I be worried about
 it?**
 
@@ -89,6 +99,6 @@ however, one of the two schemes will always work.
 
 ## References
 
-- M. Gabrié, A. Manoel, N. Luneau, J. Barbier, N. Macris, F. Krzakala and L.
+- M. Gabrié, A. Manoel, C. Luneau, J. Barbier, N. Macris, F. Krzakala and L.
   Zdeborová, *Entropy and mutual information in models of deep neural
   networks*, [arXiv:1805.09785](https://arxiv.org/abs/1805.09785).
