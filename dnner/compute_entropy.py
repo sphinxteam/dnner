@@ -161,8 +161,8 @@ def __phi(fixed_points, layers, weights, alpha, alpha_t, rho, rho_t):
 
     Notes
     -----
-    In the current convention, `alpha_t[0]` = :math:`\tilde{\alpha}_{L + 1}`
-    and `alpha[0]` = :math:`\alpha_L`
+    In the current convention, `alpha_t[0]` = :math:`\tilde{\alpha}_0 = 1`
+    and `alpha[0]` = :math:`\alpha_1`
     """
     n_layers = len(layers) - 1
     v, a, v_in, a_in, theta = fixed_points
