@@ -5,7 +5,7 @@
 The code in this package computes the entropy, mutual information and MMSE
 of multi-layer GLMs given orthogonally-invariant matrices of arbitrary
 spectrum. More details available in
-[arXiv:1805.09785](https://arxiv.org/abs/1805.09785).
+[arXiv:1805.09785](https://arxiv.org/abs/1805.09785) and our published [NeurIPS 2018 paper](https://papers.nips.cc/paper/7453-entropy-and-mutual-information-in-models-of-deep-neural-networks)
 
 ## Instructions
 
@@ -98,4 +98,4 @@ however, one of the two schemes will always work.
 
 - M. Gabrié, A. Manoel, C. Luneau, J. Barbier, N. Macris, F. Krzakala and L.
   Zdeborová, *Entropy and mutual information in models of deep neural
-  networks*, [arXiv:1805.09785](https://arxiv.org/abs/1805.09785).
+  networks*, [Advances in Neural Information Processing Systems 31 (NIPS 2018)](https://papers.nips.cc/paper/7453-entropy-and-mutual-information-in-models-of-deep-neural-networks).
